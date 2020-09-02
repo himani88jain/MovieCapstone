@@ -12,19 +12,27 @@
    <div class ="container">
 			<form action="/searchSubmit">
 	<label>search</label>
-	<input type="text" name="search"> <label>Search by</label>
-             <select id = "myList">
-               <option name="original_title" value = "1">Title</option>
-               <option value = "2">Genre</option>
-               <option value = "3">Run Time</option>
-             </select>
+	<input type="text" name="results"> <label>Search by</label>
 	    <button type="submit" >Search</button>
 	    </form>
-			</div>
+	    
+	    <form action="/searchByGenre">
+	    <label>Search By Genre</label>
+	    <input type="text" name="genre"/>
+	    <button type="submit">Search By Genre</button>
+	    </form>
+			
 			<p>
-				<c:forEach var="movie" items="movie">
-					${movie.original_title}
+				<c:forEach var="movie" items="${movie}">
+					${movie.title}<br>
+					${movie.vote_average}<br><br>
 				</c:forEach>
 			</p>
+			</div>
+		<div>
+			<form action="/topRated">
+			<button type="submit">TopRated</button>
+			</form>
+		</div>		
 </body>
 </html>

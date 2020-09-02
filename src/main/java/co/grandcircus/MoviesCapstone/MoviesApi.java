@@ -27,10 +27,29 @@ public class MoviesApi {
 		rt = new RestTemplateBuilder().additionalInterceptors(interceptor).build();
 	}
 	
-	public List<Movie> searchMovie(String original_title) {
-	String url="https://api.themoviedb.org/3/search/movie?{apiKey}&query={original_title}";
-	List<Movie> movie=rt.getForObject(url,MovieList.class,apiKey,original_title).getResults();
+	public List<Movie> searchMovie(String title) {
+	String url="https://api.themoviedb.org/3/search/movie?api_key={apiKey}&query={results}";
+	List<Movie> movie=rt.getForObject(url,MovieList.class,apiKey,title).getResults();
+
 	return movie;
 	
+}
+	public List<Movie> searchByTopRatedMovies(){
+		String url="https://api.themoviedb.org/3/movie/top_rated?api_key={apiKey}&language=en-US&page=1";
+		List<Movie> movie =rt.getForObject(url,MovieList.class,apiKey).getResults();
+		return movie;
+	}
+	
+	public List<Movie> searchByGenre(Long id)
+	{
+		String url="https://api.themoviedb.org/3/discover/movie?api_key={apiKey}&language=en-US&with_genres={id}";
+	   List<Movie> movie=rt.getForObject(url,MovieList.class,apiKey,id).getResults();
+	   return movie;
+	}
+	
+	public Genre searchGenrename() {
+	String url="https://api.themoviedb.org/3/genre/movie/list?api_key={apiKey}&language=en-US";
+	 Genre genre=rt.getForObject(url, Genre.class,apiKey);
+	 return genre;
 }
 }

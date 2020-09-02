@@ -21,11 +21,27 @@ public class MoviesController {
 	}
 	
 @RequestMapping("/searchSubmit")
-public String searchMovie(Model model,@RequestParam("original_title") String title) {
+public String searchMovie(Model model,@RequestParam("results") String title) {
 	List<Movie> movie=api.searchMovie(title);
-	model.addAttribute("movie",movie);
-	return "homepage";
 	
-}
+	model.addAttribute("movie",movie);
+	return "homepage";	
 }
 
+@RequestMapping("/topRated")
+public String topRatedMovies(Model model) {
+	List<Movie> movie=api.searchByTopRatedMovies();
+	model.addAttribute("movie",movie);
+	return "homepage";
+}
+
+@RequestMapping("/searchByGenre")
+public String searchByGenre(Model model,@RequestParam("genre") String genre) {
+	  Genre g=api.searchGenrename();
+	  if(genre.equalsIgnoreCase(g.getName())){
+	 List<Movie> movie=api.searchByGenre(g.getId());
+	 model.addAttribute("movie",movie);
+}
+	  return "homepage";
+}
+}

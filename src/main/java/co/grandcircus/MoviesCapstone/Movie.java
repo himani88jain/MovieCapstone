@@ -17,7 +17,7 @@ public class Movie {
 	@ManyToOne
 	private Genre genres;
 	private String original_language;
-	private String original_title;
+	private String title;
 	private String overview;
 	private String release_date;
 	private Double vote_average;
@@ -40,11 +40,11 @@ public class Movie {
 	public void setOriginal_language(String original_language) {
 		this.original_language = original_language;
 	}
-	public String getOriginal_title() {
-		return original_title;
+	public String getTitle() {
+		return title;
 	}
-	public void setOriginal_title(String original_title) {
-		this.original_title = original_title;
+	public void setTitle(String title) {
+		this.title =title;
 	}
 	public String getOverview() {
 		return overview;
@@ -63,6 +63,12 @@ public class Movie {
 	}
 	public void setVote_average(Double vote_average) {
 		this.vote_average = vote_average;
+	}
+	@Override
+	public String toString() {
+		return "Movie [id=" + id + ", genres=" + genres + ", original_language=" + original_language
+				+ ", title=" + title + ", overview=" + overview + ", release_date=" + release_date
+				+ ", vote_average=" + vote_average + "]";
 	}
 	
 	
