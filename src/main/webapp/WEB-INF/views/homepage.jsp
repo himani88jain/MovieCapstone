@@ -8,7 +8,9 @@
 <title>Insert title here</title>
 
 
+
 <link href="style.css" rel="stylesheet" />
+
 <h1>Movie Search</h1>
 </head>
 <body>
@@ -59,6 +61,7 @@
 		<c:forEach var="movie" items="${movie}">
 			<div id=movie>
 				<div name=info>
+
 				<a href="/show-details?id=${movie.id}">${movie.title}</a><br>
 					${movie.vote_average}<br>
 					
