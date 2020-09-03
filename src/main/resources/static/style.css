@@ -1,5 +1,14 @@
-
-
+.main {
+	background-image: url("/images/ticket.jpg");
+	height:100%;
+	width: auto;
+}
+h1 {
+	height: 100px;
+	width: 100%;
+	background-image: url("/images/movieHeader.jpg");
+	border-radius: 5px;
+}
 body{
 	background-color: black;
 	color: white;
@@ -46,11 +55,6 @@ input{
 	border-radius: 5px;
 
 }
-
-
-/* Required Styling */
-
-
 
 .custom-checkbox {
   margin-left: 2em;

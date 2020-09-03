@@ -19,11 +19,13 @@
 		<div>
 			<form action="/topRated">
 				<button type="submit">TopRated</button>
-			</form>
-			<form action="/show-favorites">
-				<button type="submit">Show favorite List</button>
-			</form>
-		</div>
+			</form></div>
+			<div>
+				<form action="/show-favorites">
+					<button type="submit">favorites</button>
+				</form>
+			</div>
+		
 		<div class="container">
 			<form action="/searchSubmit">
 				<label>search</label> <input type="text" name="results">

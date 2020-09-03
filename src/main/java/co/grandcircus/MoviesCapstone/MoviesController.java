@@ -67,7 +67,7 @@ public String saveFav(Model model,@RequestParam("id") Long id) {
 	System.out.println("Movie fav"+mf);
 	dao.save(mf);
 	System.out.println("Movie is"+movie);
-	return "homepage";
+	return "redirect:/show-favorites";
 }
 
 @RequestMapping("/show-favorites")
