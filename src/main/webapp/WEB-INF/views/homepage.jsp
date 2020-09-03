@@ -50,7 +50,7 @@
 			
 			<p>
 				<c:forEach var="movie" items="${movie}">
-					${movie.title}<br>
+					<a href="/save-favorites?id=${movie.id}">${movie.title}</a><br>
 					${movie.original_language}<br>
 					${movie.release_date}<br>
 					${movie.vote_average}<br><br>
@@ -58,7 +58,7 @@
 					</div>
 					</c:forEach>
 				<form>
-			
+			     
 				</form>	
 
 			</p>

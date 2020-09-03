@@ -46,8 +46,8 @@ public String searchByGenre(Model model,@RequestParam("genres") Long genre) {
 	  return "homepage";
 }
 
-//@RequestMapping("/save-favorites/{id}")
-//public String saveFav(Model model,@PathVariable("id") Long id) {
+@RequestMapping("/save-favorites/{id}")
+public String saveFav(Model model,@PathVariable("id") Long id) {
 	
-//}
+}
 }
