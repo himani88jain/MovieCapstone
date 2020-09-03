@@ -60,16 +60,6 @@
 					${movie.title}</a>
 					${movie.release_date}<br> ${movie.vote_average}<br>
 					<div class="stars">
-<<<<<<< Updated upstream
-				<input class="star star-5" id="star-5" type="radio" name="star" /> <label
-					class="star star-5" for="star-5"></label>
-			</div>
-					</c:forEach>
-				<form>
-			     
-				</form>	
-=======
->>>>>>> Stashed changes
 
 						<input class="star star-5" id="star-5" type="radio" name="star" action="/save-favorites?id=${movie.id}"> 
 						<label class="star star-5" for="star-5"></label>
