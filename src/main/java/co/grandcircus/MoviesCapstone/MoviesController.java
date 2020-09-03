@@ -69,4 +69,7 @@ public String saveFav(Model model,@RequestParam("id") Long id) {
 	System.out.println("Movie is"+movie);
 	return "homepage";
 }
+
+//@RequestMapping("/show-favorites")
+//public String showFavorites(Model model)
 }

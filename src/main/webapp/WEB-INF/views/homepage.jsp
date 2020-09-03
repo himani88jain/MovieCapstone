@@ -57,7 +57,7 @@
 				<a href="/show-details?id=${movie.id}">${movie.title}</a><br>
 					${movie.vote_average}<br>
 					
-					<a href="/save-favorites?id=${movie.id}" class="button">Add to favorites</a>
+					<a href="/save-favorites?id=${movie.id}">Add to favorites</a>
 					
 					
 				</div>
