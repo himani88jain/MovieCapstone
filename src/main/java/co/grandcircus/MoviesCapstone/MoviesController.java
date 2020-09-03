@@ -36,12 +36,12 @@ public String topRatedMovies(Model model) {
 }
 
 @RequestMapping("/searchByGenre")
-public String searchByGenre(Model model,@RequestParam("genre") String genre) {
-	  Genre g=api.searchGenrename();
-	  if(genre.equalsIgnoreCase(g.getName())){
-	 List<Movie> movie=api.searchByGenre(g.getId());
+public String searchByGenre(Model model,@RequestParam("genres") Long genre) {  
+  	
+	List<Genre> g=api.searchGenreId();
+	System.out.println("g is"+g);
+	List<Movie> movie=api.searchByGenre(genre);
 	 model.addAttribute("movie",movie);
-}
 	  return "homepage";
 }
 }

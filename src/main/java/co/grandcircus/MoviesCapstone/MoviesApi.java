@@ -35,7 +35,7 @@ public class MoviesApi {
 	
 }
 	public List<Movie> searchByTopRatedMovies(){
-		String url="https://api.themoviedb.org/3/movie/top_rated?api_key={apiKey}&language=en-US&page=1";
+		String url="https://api.themoviedb.org/3/movie/top_rated?api_key={apiKey}";
 		List<Movie> movie =rt.getForObject(url,MovieList.class,apiKey).getResults();
 		return movie;
 	}
@@ -44,12 +44,18 @@ public class MoviesApi {
 	{
 		String url="https://api.themoviedb.org/3/discover/movie?api_key={apiKey}&language=en-US&with_genres={id}";
 	   List<Movie> movie=rt.getForObject(url,MovieList.class,apiKey,id).getResults();
+	   System.out.println("movie"+movie);
 	   return movie;
 	}
 	
-	public Genre searchGenrename() {
-	String url="https://api.themoviedb.org/3/genre/movie/list?api_key={apiKey}&language=en-US";
-	 Genre genre=rt.getForObject(url, Genre.class,apiKey);
-	 return genre;
-}
+	public List<Genre> searchGenreId()
+	{
+	String url="https://api.themoviedb.org/3/genre/movie/list?api_key={apiKey}";
+	Movie movie=rt.getForObject(url,Movie.class,apiKey);
+	System.out.println("Genre is "+movie);
+	List<Genre> genre=movie.getGenre();
+	return genre; 
+	}
+
+	
 }

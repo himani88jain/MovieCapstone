@@ -1,11 +1,13 @@
 package co.grandcircus.MoviesCapstone;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Movie {
@@ -14,18 +16,32 @@ public class Movie {
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	@ManyToOne
-	private Genre genres;
+	@ManyToMany
+	private List<Genre> genres;
 	private String original_language;
 	private String title;
 	private String overview;
 	private String release_date;
 	private Double vote_average;
+	private String poster_path;
 	
-	public Genre getGenres() {
+	
+	public List<Genre> getGenres() {
 		return genres;
 	}
-	public void setGenres(Genre genres) {
+	public void setGenres(List<Genre> genres) {
+		this.genres = genres;
+	}
+	public String getPoster_path() {
+		return poster_path;
+	}
+	public void setPoster_path(String poster_path) {
+		this.poster_path = poster_path;
+	}
+	public List<Genre> getGenre() {
+		return genres;
+	}
+	public void setGenre(List<Genre> genres) {
 		this.genres = genres;
 	}
 	public Long getId() {
@@ -66,10 +82,12 @@ public class Movie {
 	}
 	@Override
 	public String toString() {
-		return "Movie [id=" + id + ", genres=" + genres + ", original_language=" + original_language
-				+ ", title=" + title + ", overview=" + overview + ", release_date=" + release_date
-				+ ", vote_average=" + vote_average + "]";
+		return "Movie [id=" + id + ", genres=" + genres + ", original_language=" + original_language + ", title="
+				+ title + ", overview=" + overview + ", release_date=" + release_date + ", vote_average=" + vote_average
+				+ ", poster_path=" + poster_path + "]";
 	}
+	
+	
 	
 	
 }
