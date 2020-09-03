@@ -1,5 +1,4 @@
 
-@charset "ISO-8859-1";
 body{
 	background-color: black;
 	color: white;
@@ -36,3 +35,4 @@ img {
 div.stars {
 	width: 50px;
 	display: inline-block;
+}

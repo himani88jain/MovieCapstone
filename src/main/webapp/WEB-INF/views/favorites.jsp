@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<div>
+    <ul>
+    	<c:foEach var="fav" items="${fav}"></c:foEach>
+    	<l1>
+    </ul>
+</div>
 </body>
 </html>

@@ -6,6 +6,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+
 <link href="style.css" rel="stylesheet" />
 <h1>Movie Search</h1>
 </head>
@@ -45,7 +47,7 @@
 					<option value="53">Thriller</option>
 					<option value="10752">War</option>
 					<option value="37">Western</option>
-				</select> </select>
+				</select>
 				<button type="submit">Search By Genre</button>
 			</form>
 		</div>

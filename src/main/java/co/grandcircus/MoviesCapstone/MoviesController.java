@@ -72,7 +72,8 @@ public String saveFav(Model model,@RequestParam("id") Long id) {
 
 @RequestMapping("/show-favorites")
 public String showFavorites(Model model) {
-	dao.findAll();
+	List<MovieFavorites> fav=dao.findAll();
+	model.addAttribute("favorite",fav);
 	return "favorites";
 }
 }
