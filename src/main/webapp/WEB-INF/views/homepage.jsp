@@ -14,7 +14,7 @@
 
 <h1>Movie Search</h1>
 </head>
-<body>
+<body class=pageBody>
 	<h2>
 		<div>
 			<form action="/topRated">
@@ -63,7 +63,7 @@
 			<div id=movie>
 				<div name=info>
 
-				<a href="/show-details?id=${movie.id}">${movie.title}</a><br>
+				<font size="90px"><a href="/show-details?id=${movie.id}" style="color:#000000">${movie.title}</a></font><br>
 					${movie.vote_average}<br>
 					
 					

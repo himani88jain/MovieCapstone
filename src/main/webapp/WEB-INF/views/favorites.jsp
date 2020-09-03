@@ -17,7 +17,11 @@
     	<li><a href="/show-details?id=${fav.id}">${fav.title}</a></li>
     	<c:out value="${fav.vote_average}"/>
     	<img src="https://image.tmdb.org/t/p/original${fav.poster_path}"/><br><br>
+
     	<a href="/delete-favorites?id=${fav.id}"><button>Delete Favorites</button></a><br><br><br>
+
+    	<font size="90px"><a href="/delete-favorites?id=${fav.id}"><button>Delete Favorites</button></a></font>
+
     	</c:forEach>
     </ol>
 </div>
