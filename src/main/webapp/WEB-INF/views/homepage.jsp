@@ -14,12 +14,13 @@
 
 <h1>Movie Search</h1>
 </head>
-<body>
+<body class=pageBody>
 	<h2>
 		<div>
 			<form action="/topRated">
 				<button type="submit">TopRated</button>
-			</form></div>
+			</form>
+			</div>
 			<div>
 				<form action="/show-favorites">
 					<button type="submit">favorites</button>
