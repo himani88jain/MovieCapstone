@@ -8,7 +8,7 @@ public class Movie {
 	
 	private Long id;
 	private List<Genre> genres;
-	private String original_language;
+	private List<Language> spoken_languages;
 	private String title;
 	private String overview;
 	private String release_date;
@@ -40,11 +40,12 @@ public class Movie {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getOriginal_language() {
-		return original_language;
+	
+	public List<Language> getSpoken_languages() {
+		return spoken_languages;
 	}
-	public void setOriginal_language(String original_language) {
-		this.original_language = original_language;
+	public void setSpoken_languages(List<Language> spoken_languages) {
+		this.spoken_languages = spoken_languages;
 	}
 	public String getTitle() {
 		return title;
@@ -72,10 +73,11 @@ public class Movie {
 	}
 	@Override
 	public String toString() {
-		return "Movie [id=" + id + ", genres=" + genres + ", original_language=" + original_language + ", title="
-				+ title + ", overview=" + overview + ", release_date=" + release_date + ", vote_average=" + vote_average
+		return "Movie [id=" + id + ", genres=" + genres + ", spoken_languages=" + spoken_languages + ", title=" + title
+				+ ", overview=" + overview + ", release_date=" + release_date + ", vote_average=" + vote_average
 				+ ", poster_path=" + poster_path + "]";
 	}
+	
 	
 	
 	

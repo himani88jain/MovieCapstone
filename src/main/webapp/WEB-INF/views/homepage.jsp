@@ -7,12 +7,9 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link href="style.css" rel="stylesheet" />
-<link rel="stylesheet"
-	href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <h1>Movie Search</h1>
 </head>
 <body>
-
 	<h2>
 		<div>
 			<form action="/topRated">
@@ -57,39 +54,20 @@
 		<c:forEach var="movie" items="${movie}">
 			<div id=movie>
 				<div name=info>
-					${movie.title}</a>
-					${movie.release_date}<br> ${movie.vote_average}<br>
-					<div class="stars">
-<<<<<<< Updated upstream
-				<input class="star star-5" id="star-5" type="radio" name="star" /> <label
-					class="star star-5" for="star-5"></label>
-			</div>
-					</c:forEach>
-				<form>
-			     
-				</form>	
-=======
->>>>>>> Stashed changes
-
-						<input class="star star-5" id="star-5" type="radio" name="star" action="/save-favorites?id=${movie.id}"> 
-						<label class="star star-5" for="star-5"></label>
-
-					</div>
+				<a href="/show-details?id=${movie.id}">${movie.title}</a><br>
+					${movie.vote_average}<br>
+					
+					<a href="/save-favorites?id=${movie.id}" class="button">Add to favorites</a>
+					
 					
 				</div>
-
 				<div id="Poster">
 					<img name=poster
 						src="https://image.tmdb.org/t/p/original${movie.poster_path}" />
 				</div>
-
 			</div>
 		</c:forEach>
 		<form></form>
-
-
-
 	</div>
-
 </body>
 </html>
