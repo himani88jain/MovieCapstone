@@ -44,7 +44,6 @@ public class MoviesApi {
 	{
 		String url="https://api.themoviedb.org/3/discover/movie?api_key={apiKey}&language=en-US&with_genres={id}";
 	   List<Movie> movie=rt.getForObject(url,MovieList.class,apiKey,id).getResults();
-	   System.out.println("movie"+movie);
 	   return movie;
 	}
 	

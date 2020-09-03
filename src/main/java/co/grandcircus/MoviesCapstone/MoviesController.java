@@ -64,15 +64,12 @@ public String saveFav(Model model,@RequestParam("id") Long id) {
 	mf.setPoster_path(image);
 	Double rating=movie.getVote_average();
 	mf.setVote_average(rating);
-	System.out.println("Movie fav"+mf);
 	dao.save(mf);
-	System.out.println("Movie is"+movie);
 	return "redirect:/show-favorites";
 }
 
 @RequestMapping("/show-favorites")
 public String showFavorites(Model model) {
-	System.out.println("hello");
 	List<MovieFavorites> fav=dao.findAll();
 	model.addAttribute("favorite",fav);
 	return "favorites";
