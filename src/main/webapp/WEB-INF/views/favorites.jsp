@@ -15,6 +15,7 @@
     	<c:forEach var="fav" items="${favorite}">
     	<li>	<c:out value="${fav.title}"/></li>
     	<c:out value="${fav.vote_average}"/>
+
     	<img src="https://image.tmdb.org/t/p/original${fav.poster_path}"/><br><br>
     	<a href="/delete-favorites?id=${fav.id}"><button>Delete Favorites</button></a>
     	</c:forEach>
