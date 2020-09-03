@@ -1,10 +1,13 @@
 .pageBody {
-	height: 100px;
-	background-size:cover;
+	background-size: cover;
+	background: url("https://64.media.tumblr.com/d7437377bdc5d2b706bb5359787b760d/tumblr_nsl0uoVuLo1txeruoo1_r3_500.gifv") no-repeat fixed center;
+	background-color: black;
+	opacity: 90%;
 }
 .main {
 	height: 100%;
 	width: auto;
+	font-size: 100px;
 }
 
 h1 {
@@ -16,7 +19,6 @@ h1 {
 
 body {
 	background-size: cover;
-	background: url("https://64.media.tumblr.com/d7437377bdc5d2b706bb5359787b760d/tumblr_nsl0uoVuLo1txeruoo1_r3_500.gifv") no-repeat fixed center;
 	background-color: black;
 	opacity: 90%;
 }

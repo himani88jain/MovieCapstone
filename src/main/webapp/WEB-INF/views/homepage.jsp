@@ -63,7 +63,7 @@
 			<div id=movie>
 				<div name=info>
 
-				<font size="90px"><a href="/show-details?id=${movie.id}" style="color:#000000">${movie.title}</a></font><br>
+				<font size="50px"><a href="/show-details?id=${movie.id}" style="color:#000000">${movie.title}</a></font><br>
 					${movie.vote_average}<br>
 					
 					
