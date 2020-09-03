@@ -6,9 +6,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+
 <link href="style.css" rel="stylesheet" />
-<link rel="stylesheet"
-	href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <h1>Movie Search</h1>
 </head>
 <body>
@@ -57,15 +57,12 @@
 		<c:forEach var="movie" items="${movie}">
 			<div id=movie>
 				<div name=info>
-					${movie.title}</a>
-					${movie.release_date}<br> ${movie.vote_average}<br>
+					${movie.title}<br> ${movie.release_date}<br>
+					${movie.vote_average}<br>
 					<div class="stars">
 
-						<input class="star star-5" id="star-5" type="radio" name="star" action="/save-favorites?id=${movie.id}"> 
-						<label class="star star-5" for="star-5"></label>
-
 					</div>
-					
+
 				</div>
 
 				<div id="Poster">
