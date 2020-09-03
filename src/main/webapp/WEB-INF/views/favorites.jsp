@@ -9,7 +9,9 @@
 <body>
 <div>
     <ul>
-    	<c:foEach var="fav" items="${fav}"></c:foEach>
+    	<c:forEach var="fav" items="${fav}">
+    		${fav}
+    	</c:forEach>
     	<l1>
     </ul>
 </div>

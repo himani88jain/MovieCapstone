@@ -17,6 +17,9 @@
 			<form action="/topRated">
 				<button type="submit">TopRated</button>
 			</form>
+			<form action="/show-favorites">
+				<button type="submit">Show favorite List</button>
+			</form>
 		</div>
 		<div class="container">
 			<form action="/searchSubmit">
