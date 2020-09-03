@@ -11,6 +11,7 @@
 </head>
 <body>
 <div>
+	<a href="/">@HomePage</a>
     <ol>
     	<c:forEach var="fav" items="${favorite}">
     	<li><a href="/show-details?id=${fav.id}">${fav.title}</a></li>
