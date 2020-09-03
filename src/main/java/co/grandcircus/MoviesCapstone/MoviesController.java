@@ -77,4 +77,5 @@ public String showFavorites(Model model) {
 	model.addAttribute("favorite",fav);
 	return "favorites";
 }
+
 }
