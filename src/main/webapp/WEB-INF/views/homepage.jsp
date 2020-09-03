@@ -14,7 +14,6 @@
 <h1>Movie Search</h1>
 </head>
 <body>
-
 	<h2>
 		<div>
 			<form action="/topRated">
@@ -50,7 +49,7 @@
 					<option value="53">Thriller</option>
 					<option value="10752">War</option>
 					<option value="37">Western</option>
-				</select> </select>
+				</select>
 				<button type="submit">Search By Genre</button>
 			</form>
 		</div>
@@ -60,27 +59,20 @@
 			<div id=movie>
 				<div name=info>
 
-					${movie.title}<br> ${movie.release_date}<br>
+				<a href="/show-details?id=${movie.id}">${movie.title}</a><br>
 					${movie.vote_average}<br>
-					<div class="stars">
-
-					</div>
-
-
+					
+					<a href="/save-favorites?id=${movie.id}">Add to favorites</a>
+					
+					
 				</div>
-
 				<div id="Poster">
 					<img name=poster
 						src="https://image.tmdb.org/t/p/original${movie.poster_path}" />
 				</div>
-
 			</div>
 		</c:forEach>
 		<form></form>
-
-
-
 	</div>
-
 </body>
 </html>

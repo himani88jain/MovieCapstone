@@ -46,6 +46,12 @@ public String searchByGenre(Model model,@RequestParam("genres") Long genre) {
 	  return "homepage";
 }
 
+@RequestMapping("/show-details")
+public String showMovieDetails(Model model, @RequestParam("id") Long id) {
+	Movie movie=api.searchId(id);
+	model.addAttribute("movie",movie);
+	return "movie-details";
+}
 @RequestMapping("/save-favorites")
 public String saveFav(Model model,@RequestParam("id") Long id) {
 	Movie movie=api.searchId(id);
@@ -62,5 +68,12 @@ public String saveFav(Model model,@RequestParam("id") Long id) {
 	dao.save(mf);
 	System.out.println("Movie is"+movie);
 	return "homepage";
+}
+
+@RequestMapping("/show-favorites")
+public String showFavorites(Model model) {
+	List<MovieFavorites> fav=dao.findAll();
+	model.addAttribute("favorite",fav);
+	return "favorites";
 }
 }
