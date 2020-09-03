@@ -46,8 +46,21 @@ public String searchByGenre(Model model,@RequestParam("genres") Long genre) {
 	  return "homepage";
 }
 
-@RequestMapping("/save-favorites/{id}")
-public String saveFav(Model model,@PathVariable("id") Long id) {
-	
+@RequestMapping("/save-favorites")
+public String saveFav(Model model,@RequestParam("id") Long id) {
+	Movie movie=api.searchId(id);
+	MovieFavorites mf=new MovieFavorites();
+	Long favId= movie.getId();
+	mf.setId(favId);
+	String favTitle=movie.getTitle();
+	mf.setTitle(favTitle);
+	String image=movie.getPoster_path();
+	mf.setPoster_path(image);
+	Double rating=movie.getVote_average();
+	mf.setVote_average(rating);
+	System.out.println("Movie fav"+mf);
+	dao.save(mf);
+	System.out.println("Movie is"+movie);
+	return "homepage";
 }
 }

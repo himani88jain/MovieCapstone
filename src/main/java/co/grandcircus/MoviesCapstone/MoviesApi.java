@@ -48,6 +48,12 @@ public class MoviesApi {
 	   return movie;
 	}
 	
+	public Movie searchId(Long id) {
+		String url="https://api.themoviedb.org/3/movie/{id}?api_key={apiKey}";
+		Movie movie=rt.getForObject(url,Movie.class,id,apiKey);
+		return movie;
+	}
+	
 
 	
 }
