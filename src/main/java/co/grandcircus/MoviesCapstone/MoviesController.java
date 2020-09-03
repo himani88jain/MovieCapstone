@@ -70,6 +70,9 @@ public String saveFav(Model model,@RequestParam("id") Long id) {
 	return "homepage";
 }
 
-//@RequestMapping("/show-favorites")
-//public String showFavorites(Model model)
+@RequestMapping("/show-favorites")
+public String showFavorites(Model model) {
+	dao.findAll();
+	return "favorites";
+}
 }
