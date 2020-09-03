@@ -20,18 +20,22 @@
 			<form action="/topRated">
 				<button type="submit">TopRated</button>
 			</form>
+<<<<<<< HEAD
 			</div>
 			<div>
 				<form action="/show-favorites">
 					<button type="submit">favorites</button>
+=======
+				<br><form action="/show-favorites">
+					<button type="submit">Favorites</button>
+>>>>>>> bfc8c111d99fc59b060eea841c93f90fec5c2442
 				</form>
 			</div>
 		
 		<div class="container">
 			<form action="/searchSubmit">
-				<label>search</label> <input type="text" name="results">
+				<input type="text" name="results" placeholder="Movie Name">
 				<button type="submit">Search</button>
-				<label>Search by</label>
 		</div>
 		</form>
 		<div>
@@ -66,7 +70,7 @@
 			<div id=movie>
 				<div name=info>
 
-				<a href="/show-details?id=${movie.id}">${movie.title}</a><br>
+				<font size="50px"><a href="/show-details?id=${movie.id}" style="color:#000000">${movie.title}</a></font><br>
 					${movie.vote_average}<br>
 					
 					
