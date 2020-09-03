@@ -7,6 +7,8 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link href="style.css" rel="stylesheet"/>
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <h1>Movie Search</h1>
 </head>
 <body>
@@ -48,20 +50,27 @@
 	    <button type="submit">Search By Genre</button>
 	    </form>
 			
-			<p>
+			<div id= movie>
 				<c:forEach var="movie" items="${movie}">
 					<a href="/save-favorites?id=${movie.id}">${movie.title}</a><br>
 					${movie.original_language}<br>
 					${movie.release_date}<br>
 					${movie.vote_average}<br><br>
-			<div id="Poster">		<img src="https://image.tmdb.org/t/p/original${movie.poster_path}" />
+			<div id="Poster"><img name=poster src="https://image.tmdb.org/t/p/original${movie.poster_path}" />
 					</div>
+					<div class="stars">
+
+				<input class="star star-5" id="star-5" type="radio" name="star" /> <label
+					class="star star-5" for="star-5"></label>
+
+			</div>
 					</c:forEach>
 				<form>
 			     
 				</form>	
 
-			</p>
+			
+			</div>
 			</div>
 				
 </body>
