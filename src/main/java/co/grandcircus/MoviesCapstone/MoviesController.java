@@ -78,4 +78,11 @@ public String showFavorites(Model model) {
 	return "favorites";
 }
 
+@RequestMapping("/delete-favorites")
+public String deleteFavorites(@RequestParam("id") Long id) {
+	dao.deleteById(id);
+	return "redirect:/show-favorites";
+}
+
+
 }
