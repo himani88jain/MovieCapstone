@@ -1,13 +1,12 @@
 package co.grandcircus.MoviesCapstone;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class MovieFavorites {
 
+	@Id
     private Long id;
 	private String title;
 	private String overview;

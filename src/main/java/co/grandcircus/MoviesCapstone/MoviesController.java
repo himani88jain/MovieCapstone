@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -13,6 +14,9 @@ public class MoviesController {
 	
 	@Autowired
 	private MoviesApi api;
+	
+	@Autowired
+	private MovieFavoritesDao dao;
 
 	@RequestMapping("/")
 	public String home() {
@@ -37,11 +41,13 @@ public String topRatedMovies(Model model) {
 
 @RequestMapping("/searchByGenre")
 public String searchByGenre(Model model,@RequestParam("genres") Long genre) {  
-  	
-	List<Genre> g=api.searchGenreId();
-	System.out.println("g is"+g);
 	List<Movie> movie=api.searchByGenre(genre);
 	 model.addAttribute("movie",movie);
 	  return "homepage";
 }
+
+//@RequestMapping("/save-favorites/{id}")
+//public String saveFav(Model model,@PathVariable("id") Long id) {
+	
+//}
 }

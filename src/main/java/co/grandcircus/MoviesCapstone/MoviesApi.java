@@ -48,14 +48,6 @@ public class MoviesApi {
 	   return movie;
 	}
 	
-	public List<Genre> searchGenreId()
-	{
-	String url="https://api.themoviedb.org/3/genre/movie/list?api_key={apiKey}";
-	Movie movie=rt.getForObject(url,Movie.class,apiKey);
-	System.out.println("Genre is "+movie);
-	List<Genre> genre=movie.getGenre();
-	return genre; 
-	}
 
 	
 }
