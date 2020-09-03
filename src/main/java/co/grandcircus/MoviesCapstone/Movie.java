@@ -2,21 +2,11 @@ package co.grandcircus.MoviesCapstone;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-
-@Entity
 public class Movie {
 
 	
 	
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	@ManyToMany
 	private List<Genre> genres;
 	private String original_language;
 	private String title;
