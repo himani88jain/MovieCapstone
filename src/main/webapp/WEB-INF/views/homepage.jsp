@@ -61,7 +61,6 @@
 					<div class="stars">
 				<input class="star star-5" id="star-5" type="radio" name="star" /> <label
 					class="star star-5" for="star-5"></label>
-</form>
 			</div>
 					</c:forEach>
 				<form>
