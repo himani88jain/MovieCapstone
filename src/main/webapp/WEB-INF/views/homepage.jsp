@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -65,7 +66,15 @@
 				<a href="/show-details?id=${movie.id}">${movie.title}</a><br>
 					${movie.vote_average}<br>
 					
-					<a href="/save-favorites?id=${movie.id}"><button>Add to favorites</button></a>
+					
+					
+					
+					<a href="/save-favorites?id=${movie.id}" class="custom-checkbox">
+
+  							<i class="glyphicon glyphicon-star-empty"></i>
+  							<i class="glyphicon glyphicon-star"></i>
+ 						 
+					</a>
 					
 					
 				</div>
