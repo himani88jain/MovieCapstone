@@ -36,6 +36,9 @@
 		</div>
 
 		<div class=container>
+
+				<br><form action="/show-favorites">
+					<button type="submit">Favorites</button>
 			<form action="/searchSubmit">
 				<input type="text" name="results" placeholder="Movie Name">
 				<button type="submit">Search</button>
@@ -96,6 +99,13 @@
 					<td>
 						
 							<img src="https://image.tmdb.org/t/p/original${movie.poster_path}" />
+				<font size="50px"><a href="/show-details?id=${movie.id}" style="color:#000000">${movie.title}</a></font><br>
+					${movie.vote_average}<br>
+					
+					
+					
+					
+					<a href="/save-favorites?id=${movie.id}" class="custom-checkbox">
 
 					</td>
 			</c:forEach>
