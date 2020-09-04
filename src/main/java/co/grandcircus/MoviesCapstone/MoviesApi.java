@@ -40,6 +40,12 @@ public class MoviesApi {
 		return movie;
 	}
 	
+	public List<Movie> searchTrendingMovies(){
+		String url="https://api.themoviedb.org/3/trending/all/day?api_key={apiKey}";
+		List<Movie> movie=rt.getForObject(url,MovieList.class,apiKey).getResults();
+		return movie;
+	}
+	
 	public List<Movie> searchByGenre(Long id)
 	{
 		String url="https://api.themoviedb.org/3/discover/movie?api_key={apiKey}&language=en-US&with_genres={id}";

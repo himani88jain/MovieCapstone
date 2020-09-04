@@ -1,5 +1,6 @@
 package co.grandcircus.MoviesCapstone;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,12 @@ public String topRatedMovies(Model model) {
 	return "homepage";
 }
 
+@RequestMapping("/trending")
+public String trendingMovies(Model model) {
+	List<Movie> movie=api.searchTrendingMovies();
+	model.addAttribute("movie",movie);
+	return "homepage";
+}
 @RequestMapping("/searchByGenre")
 public String searchByGenre(Model model,@RequestParam("genres") Long genre) {  
 	List<Movie> movie=api.searchByGenre(genre);

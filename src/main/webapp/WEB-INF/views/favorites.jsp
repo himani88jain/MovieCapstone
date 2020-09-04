@@ -7,19 +7,27 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link href="style.css" rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+
 
 </head>
-<body>
+<body background="images/light.jpg">
 <div>
-	<a href="/">@HomePage</a>
-    <table>
+<article>
+<header><a href="/" class="homepage">@Homepage</a>
+</header>
+</article>
+	<h1></h1>
+    <table class="table">
     <tr>
     	<c:forEach var="fav" items="${favorite}">
-    	<th><a href="/show-details?id=${fav.id}">${fav.title}</a>
-    	<c:out value="${fav.vote_average}"/><br>
+    	<th><font size="4px"><a href="/show-details?id=${fav.id}">${fav.title}</font></a>&nbsp;&nbsp;
+    	<c:out value=" Rating : ${fav.vote_average}"/><br>
     	<img src="https://image.tmdb.org/t/p/original${fav.poster_path}"/><br><br>
-    	<font size="90px"><a href="/delete-favorites?id=${fav.id}"><button>Delete Favorites</button></a></font>
-
+    	<a href="/delete-favorites?id=${fav.id}" ><button class="fav_page">Delete</button></a>
     	</c:forEach>
     	</tr>
     	</table>

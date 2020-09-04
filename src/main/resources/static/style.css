@@ -1,24 +1,48 @@
 .pageBody {
-	height: 100px;
-	background-size:cover;
-}
-.main {
-	height: 100%;
-	width: auto;
+	height:100%;
+	width:100%;
+	opacity: 100%;
+	color:white;
+	;
 }
 
+.background-image{height:100%;
+width:100%
+}
+
+.homepage{font-size:30px;
+		color:black}
 h1 {
 	height: 100px;
 	width: 100%;
 	background-image: url("/images/movieHeader.jpg");
 	border-radius: 5px;
 }
+.details{position: absolute;
+	top: 23em;
+	left: 25em;
+	height:400px;
+	width:300px
+}
+
+.fav_page{
+  background-color:black;
+  text-align: center;
+  color:white;
+  display: inline-block;
+  font-size: 25px;
+}
 
 body {
 	background-size: cover;
-	background: url("https://64.media.tumblr.com/d7437377bdc5d2b706bb5359787b760d/tumblr_nsl0uoVuLo1txeruoo1_r3_500.gifv") no-repeat fixed center;
-	background-color: black;
 	opacity: 90%;
+	color:black;
+	font-size:20px;
+	
+}
+
+p{
+	font-size:25px;
 }
 
 h2 {
@@ -45,7 +69,8 @@ h2 {
 #info {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly
+	justify-content: space-evenly;
+	color:white;
 }
 
 img {
@@ -60,9 +85,6 @@ div.stars {
 	display: inline-block;
 }
 
-button {
-	border-radius: 5px;
-}
 
 input {
 	border-radius: 5px;
@@ -77,13 +99,13 @@ input {
 .custom-checkbox .glyphicon {
 	color: blue;
 	position: absolute;
-	top: 0.4em;
-	left: -1.25em;
+	top: 0.1em;
+	left: -1.5em;
 	font-size: 5em;
 }
 
 .custom-checkbox .glyphicon-star-empty {
-	color: black;
+	color: white;
 }
 
 .custom-checkbox .glyphicon-star {

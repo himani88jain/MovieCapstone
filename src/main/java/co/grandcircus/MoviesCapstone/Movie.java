@@ -10,6 +10,7 @@ public class Movie {
 	private List<Genre> genres;
 	private List<Language> spoken_languages;
 	private String title;
+	private String original_name;
 	private String overview;
 	private String release_date;
 	private Double vote_average;
@@ -21,6 +22,13 @@ public class Movie {
 	}
 	public void setGenres(List<Genre> genres) {
 		this.genres = genres;
+	}
+	
+	public String getOriginal_name() {
+		return original_name;
+	}
+	public void setOriginal_name(String original_name) {
+		this.original_name = original_name;
 	}
 	public String getPoster_path() {
 		return poster_path;
@@ -74,9 +82,10 @@ public class Movie {
 	@Override
 	public String toString() {
 		return "Movie [id=" + id + ", genres=" + genres + ", spoken_languages=" + spoken_languages + ", title=" + title
-				+ ", overview=" + overview + ", release_date=" + release_date + ", vote_average=" + vote_average
-				+ ", poster_path=" + poster_path + "]";
+				+ ", original_name=" + original_name + ", overview=" + overview + ", release_date=" + release_date
+				+ ", vote_average=" + vote_average + ", poster_path=" + poster_path + "]";
 	}
+	
 	
 	
 	
