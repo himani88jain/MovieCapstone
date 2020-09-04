@@ -19,31 +19,31 @@
 </head>
 
 <body class="homepage" background="images/movie.jfif">
-<h1></h1>
+	<h1></h1>
 	<h2>
 		<div>
 			<form action="/topRated">
 				<button type="submit">TopRated</button>
 			</form>
-			<br>
+		</div>
+		<div>
 			<form action="/trending">
 				<button type="submit">Trending</button>
 			</form>
-			<br>
+		</div>
+		<div>
 			<form action="/show-favorites">
 				<button type="submit">Favorites</button>
 			</form>
 		</div>
+		
+		<div>
 
-		<div class=container>
-
-				<br><form action="/show-favorites">
-					<button type="submit">Favorites</button>
 			<form action="/searchSubmit">
 				<input type="text" name="results" placeholder="Movie Name">
-				<button type="submit">Search</button>
-		</div>
+		<button type="submit">Search</button>
 		</form>
+		</div>
 		<div>
 			<form action="/searchByGenre">
 				<select name="genres">
@@ -68,7 +68,7 @@
 					<option value="10752">War</option>
 					<option value="37">Western</option>
 				</select>
-				<button type="submit">Search By Genre</button>
+				<button type="submit">Search</button>
 			</form>
 		</div>
 	</h2>
@@ -76,17 +76,16 @@
 		<table class="table-sm">
 			<c:forEach var="movie" items="${movie}">
 				<tr>
-					<td>
-					<c:choose>
-						<c:when test= "${movie.title==null}">
-							<b>${movie.original_name}</b><br>
-						</c:when>
-						<c:otherwise>
-						<font size="20px"><a
-							href="/show-details?id=${movie.id}" style="color: white">
-							<b>${movie.title}</b></a></font>
-						</c:otherwise>		
-					</c:choose>
+					<td><c:choose>
+							<c:when test="${movie.title==null}">
+							<b style="color:white">${movie.original_name}</b>
+								<br>
+							</c:when>
+							<c:otherwise>
+								<font size="20px"><a href="/show-details?id=${movie.id}"
+									style="color: white"> <b>${movie.title}</b></a></font>
+							</c:otherwise>
+						</c:choose>
 						<p style="color: white">Rating: ${movie.vote_average}</p></td>
 
 
@@ -96,18 +95,9 @@
 							class="glyphicon glyphicon-star"></i>
 
 					</a></td>
-					<td>
-						
-							<img src="https://image.tmdb.org/t/p/original${movie.poster_path}" />
-				<font size="50px"><a href="/show-details?id=${movie.id}" style="color:#000000">${movie.title}</a></font><br>
-					${movie.vote_average}<br>
-					
-					
-					
-					
-					<a href="/save-favorites?id=${movie.id}" class="custom-checkbox">
-
-					</td>
+					<td><img
+						src="https://image.tmdb.org/t/p/original${movie.poster_path}" />
+				 <a	href="/save-favorites?id=${movie.id}" class="custom-checkbox"></td>
 			</c:forEach>
 		</table>
 	</div>

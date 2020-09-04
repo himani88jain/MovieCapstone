@@ -51,6 +51,8 @@ h2 {
 	justify-content: space-around;
 }
 
+
+
 #allMovie {
 	display: flex;
 	flex-direction: column;
